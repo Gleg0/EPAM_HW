@@ -1,17 +1,28 @@
+import java.sql.Array;
+import java.util.Arrays;
+
 public final class Student {
     private final String name;
     private final int age;
-    Student(String name, int age){
+    private int[] marks;
+    Student(String name, int age, int[] marks){
         this.name = name;
         this.age = age;
+        this.marks = marks;
     }
     public String getName() {
         return name;
     }
-
     public int getAge() {
         return age;
     }
+    public int[] getMarks() {
+        return Arrays.copyOf(marks,marks.length);
+    }
+    public void setMarks(int[] marks) {
+        this.marks = marks;
+    }
+
     @Override
     public int hashCode() {
         int result = name == null ? 0 : name.hashCode();
