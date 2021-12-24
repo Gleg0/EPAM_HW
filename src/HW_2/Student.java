@@ -1,4 +1,5 @@
-import java.sql.Array;
+package HW_2;
+
 import java.util.Arrays;
 
 public final class Student {
